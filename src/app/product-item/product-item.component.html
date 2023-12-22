@@ -1,1 +1,26 @@
-<p>product-item works!</p>
+
+<div class="card">
+    <div class="card-image">
+        <figure class="image is-4by4">
+            <img [src]="product.photoUrl" [alt]="product.name">
+          </figure>
+        
+
+    </div>
+    <div class="card-content">
+  
+      <div class="content">
+        <span>{{ product.name }}</span>
+        <p>{{ product.price | currency:'USD':true }}</p>
+      </div>
+    </div>
+</div>
+    
+        
+        
+
+    
+    
+    <!-- dropdown for the quantity -->
+
+
