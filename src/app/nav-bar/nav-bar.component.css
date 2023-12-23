@@ -1,0 +1,10 @@
+/* the <nav> element is a block element, so it will take up the entire width of the page. */
+/* the background color will be set to #bcd1db */
+/* the elements should be centered */
+
+.nav {
+    display: flex;
+    justify-content: center;
+    background-color: #bcd1db;
+    padding: 1em;
+}

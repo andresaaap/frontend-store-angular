@@ -8,6 +8,9 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductItemComponent } from './product-item/product-item.component';
 import { CartComponent } from './cart/cart.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { ProductListCartComponent } from './product-list-cart/product-list-cart.component';
+import { ProductItemCartComponent } from './product-item-cart/product-item-cart.component';
+import { PaymentFormComponent } from './payment-form/payment-form.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     ProductListComponent,
     ProductItemComponent,
     CartComponent,
-    NavBarComponent
+    NavBarComponent,
+    ProductListCartComponent,
+    ProductItemCartComponent,
+    PaymentFormComponent
   ],
   imports: [
     BrowserModule,
