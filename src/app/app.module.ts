@@ -11,6 +11,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ProductListCartComponent } from './product-list-cart/product-list-cart.component';
 import { ProductItemCartComponent } from './product-item-cart/product-item-cart.component';
 import { PaymentFormComponent } from './payment-form/payment-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { PaymentFormComponent } from './payment-form/payment-form.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
