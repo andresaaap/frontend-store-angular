@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Product } from '../models/Product';
 import { CartService } from '../services/cart.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-item',
@@ -14,7 +15,7 @@ export class ProductItemComponent {
     quantity: number = 0;
     quantityArray: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   
-    constructor(private cartService: CartService) {
+    constructor(private cartService: CartService, private router: Router) {
       this.product = new Product(1, "dummy", 100, "dummy", "dummy");
      }
   
@@ -23,6 +24,12 @@ export class ProductItemComponent {
 
     addToCart(product: Product, quantity: number) {
       this.cartService.addToCart(product, quantity);
+    }
+
+    goToDetails(product: Product) {
+      console.log("goToDetails");
+      //Use router to navigate to product details page  with product id
+      this.router.navigate(['/product', product.id]);
     }
 
 }

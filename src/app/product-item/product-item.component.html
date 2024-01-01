@@ -1,13 +1,13 @@
 
-<div class="card">
-    <div class="card-image">
+<div class="card ">
+    <div class="card-image" (click)="goToDetails(product)">
         <figure class="image is-4by4">
             <img [src]="product.photoUrl" [alt]="product.name">
           </figure>
         
 
     </div>
-    <div class="card-content">
+    <div class="card-content" (click)="goToDetails(product)">
   
       <div class="content">
         <span>{{ product.name }}</span>

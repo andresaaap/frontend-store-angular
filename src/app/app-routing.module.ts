@@ -9,7 +9,7 @@ import { OrderSuccessComponent } from './order-success/order-success.component';
 const routes: Routes = [
   { path: '', redirectTo: '/product-list', pathMatch: 'full' },
   { path: 'product-list', component: ProductListComponent },
-  { path: 'product-item-details/:id', component: ProductItemDetailsComponent },
+  { path: 'product/:id', component: ProductItemDetailsComponent },
   { path: 'cart', component: CartComponent },
   { path: 'order-success/:id', component: OrderSuccessComponent }
 ];

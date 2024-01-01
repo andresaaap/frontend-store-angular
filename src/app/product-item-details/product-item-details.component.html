@@ -1,1 +1,37 @@
-<p>product-item-details works!</p>
+
+
+<div class="card product-small" *ngIf="product">
+    <div class="card-image">
+        <figure class="image is-4by4">
+            <img [src]="product.photoUrl" [alt]="product.name">
+          </figure>
+        
+
+    </div>
+    <div class="card-content">
+  
+      <div class="content">
+        <span>{{ product.name }}</span>
+        <p>{{ product.description }}</p>
+        <p>{{ product.price | currency:'USD':true }}</p>
+      </div>
+    </div>
+    <div class="card-footer">
+        <div class="field">
+            <div class="control">
+              <div class="select">
+                <select [(ngModel)]="quantity">
+                  <option *ngFor="let i of quantityArray" [value]="i">{{ i }}</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        <a class="card-footer-item" (click)="addToCart(product, quantity)">Add to Cart</a>
+    </div>
+
+</div>
+
+<!-- create link with the text back to product list that redirects to /product-list -->
+
+<a routerLink="/product-list">Back to Product List</a>
+
