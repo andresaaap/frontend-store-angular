@@ -11,16 +11,19 @@ import { Product } from '../models/Product';
 })
 export class ProductListCartComponent {
   cartItems: CartItem[] = [];
+  total: number = 0;
 
   constructor(private cartService: CartService) { 
   }
 
   ngOnInit() {
     this.cartItems = this.cartService.getCartItems();
+    this.total = this.cartService.getTotal();
   }
 
   updateItemQuantity(item: CartItem) {
     this.cartService.updateItemQuantity(item);
+    this.total = this.cartService.getTotal();
   }
 
 }

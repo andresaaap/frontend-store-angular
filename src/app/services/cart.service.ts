@@ -25,4 +25,18 @@ export class CartService {
     let index = this.cartItems.findIndex(cartItem => cartItem.id === item.id);
     this.cartItems[index].quantity = item.quantity;
   }
+
+  //calculate total to pay
+  getTotal(): number {
+    let total: number = 0;
+    this.cartItems.forEach(cartItem => {
+      total += cartItem.product.price * cartItem.quantity;
+    });
+    return total;
+  }
+
+  clearCart() {
+    this.cartItems = [];
+    return this.cartItems;
+  }
 }

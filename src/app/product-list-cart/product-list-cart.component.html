@@ -2,3 +2,5 @@
 <div class="columns is-gapless is-multiline is-mobile">
     <app-product-item-cart *ngFor="let product of cartItems" [item]="product" (updateItemQuantityEvent)="updateItemQuantity(product)"></app-product-item-cart>
 </div>
+<h3>Total: {{total | currency:'USD':true}}</h3>
+

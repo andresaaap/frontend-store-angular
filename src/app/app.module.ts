@@ -12,6 +12,7 @@ import { ProductListCartComponent } from './product-list-cart/product-list-cart.
 import { ProductItemCartComponent } from './product-item-cart/product-item-cart.component';
 import { PaymentFormComponent } from './payment-form/payment-form.component';
 import { FormsModule } from '@angular/forms';
+import { OrderSuccessComponent } from './order-success/order-success.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FormsModule } from '@angular/forms';
     NavBarComponent,
     ProductListCartComponent,
     ProductItemCartComponent,
-    PaymentFormComponent
+    PaymentFormComponent,
+    OrderSuccessComponent
   ],
   imports: [
     BrowserModule,
