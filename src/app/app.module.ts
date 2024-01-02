@@ -13,6 +13,8 @@ import { ProductItemCartComponent } from './product-item-cart/product-item-cart.
 import { PaymentFormComponent } from './payment-form/payment-form.component';
 import { FormsModule } from '@angular/forms';
 import { OrderSuccessComponent } from './order-success/order-success.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSnackBarModule} from '@angular/material/snack-bar'; 
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { OrderSuccessComponent } from './order-success/order-success.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

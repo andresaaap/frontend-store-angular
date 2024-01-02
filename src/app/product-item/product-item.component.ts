@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Product } from '../models/Product';
 import { CartService } from '../services/cart.service';
 import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-product-item',
@@ -12,18 +13,25 @@ export class ProductItemComponent {
 
     // input for the product property
     @Input() product: Product;
-    quantity: number = 0;
+    quantity: number = 1;
     quantityArray: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   
-    constructor(private cartService: CartService, private router: Router) {
+    constructor(private cartService: CartService, private router: Router, private snackBar: MatSnackBar) {
       this.product = new Product(1, "dummy", 100, "dummy", "dummy");
      }
   
     ngOnInit() {
     }
+    showSuccessNotification() {
+      this.snackBar.open('Product added to cart', 'Dismiss', {
+        duration: 5000, // Duration in milliseconds (3 seconds),
+        verticalPosition: 'top'
+      });
+    }
 
     addToCart(product: Product, quantity: number) {
       this.cartService.addToCart(product, quantity);
+      this.showSuccessNotification();
     }
 
     goToDetails(product: Product) {
@@ -31,5 +39,7 @@ export class ProductItemComponent {
       //Use router to navigate to product details page  with product id
       this.router.navigate(['/product', product.id]);
     }
+
+    
 
 }
