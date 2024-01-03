@@ -1,33 +1,23 @@
-
-<div class="card ">
-    <div class="card-image" (click)="goToDetails(product)">
-        <figure class="image is-4by4">
-            <img [src]="product.photoUrl" [alt]="product.name">
-          </figure>
-        
-
-    </div>
-    <div class="card-content" (click)="goToDetails(product)">
-  
-      <div class="content">
-        <span>{{ product.name }}</span>
+<mat-card class="example-card product-small">
+  <img mat-card-image [src]="product.photoUrl" [alt]="product.name">
+  <mat-card-content>
+    <span>{{ product.name }}</span>
+        <p>{{ product.description }}</p>
         <p>{{ product.price | currency:'USD':true }}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <div class="field">
+      <div class="control">
+        <div class="select">
+          <select [(ngModel)]="quantity">
+            <option *ngFor="let i of quantityArray" [value]="i">{{ i }}</option>
+          </select>
+        </div>
       </div>
     </div>
-    <div class="card-footer">
-        <div class="field">
-            <div class="control">
-              <div class="select">
-                <select [(ngModel)]="quantity">
-                  <option *ngFor="let i of quantityArray" [value]="i">{{ i }}</option>
-                </select>
-              </div>
-            </div>
-          </div>
-        <a class="card-footer-item" (click)="addToCart(product, quantity)">Add to Cart</a>
-    </div>
-
-</div>
+  <a class="card-footer-item" (click)="addToCart(product, quantity)" mat-button>Add to Cart</a>
+  </mat-card-actions>
+</mat-card>
     
         
         

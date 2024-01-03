@@ -1,6 +1,8 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { CartItem } from '../models/CartItem';
 import { Product } from '../models/Product';
+import {MatButton} from '@angular/material/button';
+import {MatCard} from '@angular/material/card';
 
 @Component({
   selector: 'app-product-item-cart',

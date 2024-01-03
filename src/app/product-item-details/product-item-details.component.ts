@@ -4,6 +4,8 @@ import { Product } from '../models/Product';
 import { ProductService } from '../services/product.service';
 import { CartService } from '../services/cart.service';
 import { MatSnackBar } from '@angular/material/snack-bar'; 
+import {MatButton} from '@angular/material/button';
+import {MatCard} from '@angular/material/card';
 
 @Component({
   selector: 'app-product-item-details',

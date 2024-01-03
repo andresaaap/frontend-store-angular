@@ -1,22 +1,12 @@
 
-<div class="card">
-    <div class="card-image">
-        <figure class="image is-4by4">
-            <img [src]="item?.product?.photoUrl" [alt]="item?.product?.name">
-          </figure>
-        
 
-    </div>
-    <div class="card-content">
-  
-      <div class="content">
-        <span>{{ item?.product?.name }}</span>
-        <p>{{ item?.product?.price | currency:'USD':true }}</p>
-      </div>
-    </div>
-    <div class="card-footer" *ngIf="item">
-        <!-- add number quantity input that has double bindinf-->
-        <input type="number" [(ngModel)]="item.quantity" min="1" max="10" (ngModelChange)="updateItemQuantity()">
-    </div>
-
-</div>
+<mat-card class="example-card product-small">
+  <img mat-card-image [src]="item?.product?.photoUrl" [alt]="item?.product?.name">
+  <mat-card-content>
+    <span>{{ item?.product?.name }}</span>
+    <p>{{ item?.product?.price | currency:'USD':true }}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <input type="number" [(ngModel)]="item.quantity" min="1" max="10" (ngModelChange)="updateItemQuantity()">
+  </mat-card-actions>
+</mat-card>

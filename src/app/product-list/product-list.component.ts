@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ProductItemComponent } from '../product-item/product-item.component';
 import { Product } from '../models/Product';
 import { ProductService } from '../services/product.service';
+import {MatGridList} from '@angular/material/grid-list';
 
 @Component({
   selector: 'app-product-list',
