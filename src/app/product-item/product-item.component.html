@@ -1,6 +1,6 @@
 <mat-card class="example-card product-small">
-  <img mat-card-image [src]="product.photoUrl" [alt]="product.name">
-  <mat-card-content>
+  <img mat-card-image [src]="product.photoUrl" [alt]="product.name" (click)="goToDetails(product)">
+  <mat-card-content (click)="goToDetails(product)">
     <span>{{ product.name }}</span>
         <p>{{ product.description }}</p>
         <p>{{ product.price | currency:'USD':true }}</p>

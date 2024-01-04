@@ -23,7 +23,10 @@ export class ProductItemDetailsComponent {
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
 
-    this.product = this.productService.getProductById(Number(id));
+
+    this.productService.getProducts().subscribe(data => {
+      this.product = data.find(p => p.id == Number(id));
+    });
   }
 
   addToCart(product: Product, quantity: number) {

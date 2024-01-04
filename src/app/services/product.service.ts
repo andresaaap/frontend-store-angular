@@ -17,7 +17,8 @@ export class ProductService {
     return this.http.get<Product[]>('assets/data.json');
   }
 
-  getProductById(id: number) {
-    return this.products.find(product => product.id === id);
+  getProductById(id: number): Observable<Product> {
+    // request the product from the server by its id
+    return this.http.get<Product>('assets/data.json');
   }
 }
