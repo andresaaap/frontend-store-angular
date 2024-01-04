@@ -13,6 +13,7 @@ export class ProductItemCartComponent {
   @Input() item?: CartItem;
 
   @Output() updateItemQuantityEvent = new EventEmitter<number>();
+  @Output() removeItemEvent = new EventEmitter<number>();
 
   constructor() { 
 
@@ -26,6 +27,10 @@ export class ProductItemCartComponent {
     if (this.item) {
       this.updateItemQuantityEvent.emit(this.item.quantity);
     }
+  }
+
+  removeItem() {
+    this.removeItemEvent.emit();
   }
 
 

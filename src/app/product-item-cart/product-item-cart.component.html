@@ -1,6 +1,6 @@
 
 
-<mat-card class="example-card product-small">
+<mat-card class="example-card product-small" *ngIf="item">
   <img mat-card-image [src]="item?.product?.photoUrl" [alt]="item?.product?.name">
   <mat-card-content>
     <span>{{ item?.product?.name }}</span>
@@ -8,5 +8,6 @@
   </mat-card-content>
   <mat-card-actions>
     <input type="number" [(ngModel)]="item.quantity" min="1" max="10" (ngModelChange)="updateItemQuantity()">
+    <button class="card-footer-item" (click)="removeItem()" mat-button>Remove item</button>
   </mat-card-actions>
 </mat-card>

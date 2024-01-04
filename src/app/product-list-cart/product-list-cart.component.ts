@@ -27,4 +27,9 @@ export class ProductListCartComponent {
     this.total = this.cartService.getTotal();
   }
 
+  removeItem(item: CartItem) {
+    this.cartService.removeItem(item);
+    this.total = this.cartService.getTotal();
+  }
+
 }

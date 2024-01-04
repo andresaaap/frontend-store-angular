@@ -2,7 +2,7 @@
 
 <mat-grid-list cols="3" rowHeight="2:1">
     <mat-grid-tile *ngFor="let product of cartItems">
-        <app-product-item-cart [item]="product" (updateItemQuantityEvent)="updateItemQuantity(product)"></app-product-item-cart>
+        <app-product-item-cart [item]="product" (updateItemQuantityEvent)="updateItemQuantity(product)" (removeItemEvent)="removeItem(product)"></app-product-item-cart>
     </mat-grid-tile>
 </mat-grid-list>
 <h3>Total: {{total | currency:'USD':true}}</h3>

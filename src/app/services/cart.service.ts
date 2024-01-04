@@ -39,4 +39,9 @@ export class CartService {
     this.cartItems = [];
     return this.cartItems;
   }
+
+  removeItem(item: CartItem) {
+    let index = this.cartItems.findIndex(cartItem => cartItem.id === item.id);
+    this.cartItems.splice(index, 1);
+  }
 }
