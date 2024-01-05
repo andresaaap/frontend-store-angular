@@ -1,27 +1,56 @@
-# MyStoreApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.5.
+# MyStore
 
-## Development server
+MyStore is a full single-page ecommerce application built with Angular. It allows users to view a list of available products, add them to a shopping cart, and complete the checkout process. With MyStore, users can easily browse and purchase their favorite products in a seamless and user-friendly manner.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+To get started with MyStore, please follow the installation and launch instructions provided below.
 
-## Code scaffolding
+## Demo
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Click in this [link](https://youtu.be/XvH0DjqAdXo) to watch the demo
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Installation
 
-## Running unit tests
+To run the app, you will need to set up the following environment:
+- Node.js: Make sure you have Node.js installed on your machine. The app requires Node.js version 18.16.0 or higher. You can download the latest version of Node.js from the official website.
+- Angular CLI: The app is built using Angular, so you will need to have Angular CLI installed. The app specifically requires Angular CLI version 17.0.7. To install Angular CLI, open your terminal or command prompt and run the following command:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+npm install -g @angular/cli@17.0.7
 
-## Running end-to-end tests
+This will install Angular CLI globally on your machine.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Once you have Node.js and Angular CLI set up, you can proceed with running the app. Make sure to follow any additional instructions provided in the app's README file.
 
-## Further help
+To install the app, follow these steps:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Clone the repository to your local machine.
+2. Navigate to the project directory.
+3. Run npm install to install the necessary dependencies.
+    
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/andresaaap/frontend-store-angular
+```
+
+Go to the project directory
+
+```bash
+  cd my-store-app
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run start
+```
+
