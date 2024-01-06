@@ -23,7 +23,9 @@
   <div class="field">
     <label class="label">Credit Card Number</label>
     <div class="control has-icons-left has-icons-right">
-      <input class="input is-danger" name="cardNumber" type="text" placeholder="(16-digit number)" [(ngModel)]="cardNumber" required minlength="16" maxlength="16" #creditCard="ngModel">
+      <input class="input is-danger" name="cardNumber" type="tel" placeholder="(16-digit number)" [(ngModel)]="cardNumber" required minlength="16" maxlength="16" #creditCard="ngModel" numbersOnly>
+      <!-- create an input for credit card number, that must have 16 number and only accepts numbers-->
+      
       <div class="help is-error" *ngIf="creditCard.invalid && creditCard.dirty">
         Credit card number is required and must be 16 digits long.
       </div>

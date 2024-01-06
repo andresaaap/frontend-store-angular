@@ -21,6 +21,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {HttpClientModule} from '@angular/common/http';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { NumberDirective } from './directives/number.directive';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     ProductListCartComponent,
     ProductItemCartComponent,
     PaymentFormComponent,
-    OrderSuccessComponent
+    OrderSuccessComponent,
+    NumberDirective  
   ],
   imports: [
     BrowserModule,

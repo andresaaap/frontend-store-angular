@@ -15,6 +15,7 @@ export class PaymentFormComponent {
   name?: string;
   cardNumber?: string;
   address?: string;
+  
 
   @Output() orderSubmitted = new EventEmitter();
 
@@ -37,6 +38,8 @@ export class PaymentFormComponent {
       // Redirect to the order confirmation page /order-success/:id
       this.router.navigate(['/order-success', newOrder.id]);  
     }
+
+    
     
   }
 

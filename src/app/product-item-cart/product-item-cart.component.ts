@@ -3,6 +3,7 @@ import { CartItem } from '../models/CartItem';
 import { Product } from '../models/Product';
 import {MatButton} from '@angular/material/button';
 import {MatCard} from '@angular/material/card';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-product-item-cart',
@@ -15,7 +16,7 @@ export class ProductItemCartComponent {
   @Output() updateItemQuantityEvent = new EventEmitter<number>();
   @Output() removeItemEvent = new EventEmitter<number>();
 
-  constructor() { 
+  constructor(private snackBar: MatSnackBar) { 
 
   }
 
@@ -31,6 +32,14 @@ export class ProductItemCartComponent {
 
   removeItem() {
     this.removeItemEvent.emit();
+    this.showRemoveNotification(); 
+  }
+
+  showRemoveNotification() {
+    this.snackBar.open('Product was removed from cart', 'Dismiss', {
+      duration: 5000, // Duration in milliseconds (3 seconds),
+      verticalPosition: 'top'
+    });
   }
 
 
